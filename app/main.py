@@ -9,7 +9,8 @@ import requests
 from config import config
 from job import jobs_all
 
-
+username = os.getenv('username')
+password = os.getenv('password')
 def main():
     session = make_session()
 
