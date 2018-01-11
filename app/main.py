@@ -88,18 +88,18 @@ def proxy_patch():
 
 
 if __name__ == '__main__':
-    username = os.getenv('username')
-    password = os.getenv('password')
-    model={
-  "debug": false,
-  "jd": {
-    "username": username,
-    "password": password
-  },
-  "jobs_skip": ["DataStation"]
-    }
-    with open("./conf/config.default.json",'w',encoding='utf-8') as json_file:
-        json.dump(model,json_file,ensure_ascii=False)
+    #     username = os.getenv('username')
+    #     password = os.getenv('password')
+    #     model={
+    #   "debug": false,
+    #   "jd": {
+    #     "username": username,
+    #     "password": password
+    #   },
+    #   "jobs_skip": ["DataStation"]
+    #     }
+    #     with open("./conf/config.default.json",'w',encoding='utf-8') as json_file:
+    #         json.dump(model,json_file,ensure_ascii=False)
     if config.debug and os.getenv('HTTPS_PROXY'):
         proxy_patch()
 
